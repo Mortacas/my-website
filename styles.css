@@ -1,68 +1,58 @@
-.back {
-    margin: 0;
-    background-color: rgb(0, 0, 0);   
-    background-size: cover;/* the picture will cover the entire square even when resized */
-    color: rgb(255, 255, 255);
-
-   /* background-image: url("images/mvpoclogo.png");*/
-
-    padding-top: 50px; /* height cap */
-    padding-bottom: 100px;
+*{
+    margin: 5px;
+    box-sizing: border-box; /* will remove later this is for styling */
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/*
-Testing below for a new format for the layout of the webpage
-
-*/
-
-body {
+body{
+    background: rgb(255, 255, 255);
     font-family: sans-serif;
-}
-
-.wrapper {
-    display: flex;
-    flex-flow: row wrap;
     text-align: center;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least the height of the display yayyyy */
 }
 
-.wrapper > * {
-    padding: 10px;
-    margin: 10px;
-    flex: 1 100%;
-    border-radius: 10px;
+header{
+    background-color: beige;
+    padding: 2em 0;
 }
 
-.header {
-    background: red;
-    height: 120px;
+.left{ /*created class rule*/
+    background-color: rgb(247, 247, 145);
+    padding: 2em 2em;
+    flex: 1 1 100px;
 }
 
-.nav {
-    background: purple;
-    height: 80px;
+.right{ /*created class rule*/
+    background-color: rgb(38, 20, 71);
+    padding: 2em 2em;
+    flex: 1 1 100px;
 }
 
-.main {
-    background: rgb(96, 96, 126);
-    height: 300px;
+main{
+    background-color: rgb(214, 0, 0);
+    padding: 3em 3em; /* Added padding to main for consistency */
+    flex: 2 1 auto; /* Adjust main to fill available space */
 }
 
-.aside1 {
-    background: rgb(22, 147, 151);
-    height: 80px;
+footer{
+    background-color: rgb(206, 185, 185);
+    padding: 2em 2em;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
-.footer {
-    background: red;
-    background-color: red;
-    height: 200px;
-    flex-grow: 100px;
-    
+.main{ /*created class rule*/
+    display: flex;
+    flex: 1; /* Ensures that main content flex container takes up any remaining space */
 }
 
+@media all and (max-width: 550px){
+    .main{
+        flex-direction: column;
+    }
+    main{
+        padding: 5em 0; /* Increase padding in mobile view */
+    }
+}

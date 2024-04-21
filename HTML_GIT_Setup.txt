@@ -1,0 +1,65 @@
+Getting started in HTML and git
+
+Download git https://gitforwindows.org/
+Create Github Account https://github.com/
+Configure git with email and name
+	open gitbash (make sure your at the root directory)
+	type: git config --global user.name "type your name"
+	type: git config --global user.email "type your email from github account"
+
+If you want to confirm if it worked
+type: git config --list
+this will give alot of options but if you see your name and email somewhere there, go to go
+
+Next setup SSH key to excrypt your data when sending to Github.
+open gitbash
+type: cd ~/.ssh
+	if there is no folder then youll have to create one by typing: mkdir .ssh
+	when created type: cd ~/.ssh
+	type: ssh-keygen
+	press enter through the 3 prompts till your out of creating the key.
+		type: ls
+		Youll see some files you want the .pub
+		Type cat nameofthefile.pub
+		You will see the key. Highlight the entire key(do not include the cmd)
+Paste the key in the 
+		github setting
+			SSH and GPG keys under access
+				Press New SSH key(green button top right)
+					Paste key in the key area and enter
+					any name for your workstation
+						Press add SSH key (green button)
+
+
+This is if you have a project you want to push to github for the first time
+Now to Save your Project Folders open the folder in the file explorer
+Right click in the folder and open gitbash (you might have to click more options)
+When gitbash open you should be in the same file path as the folder you want to save
+Create a new repository in Github and try to make the name the same as the folders name
+press create repository at the bottom
+in this new page youll see a option for https or ssh (press ssh)
+
+Enter the Cmds for the for the or create a new repository on the cmd line (one line is idfferent)
+						git add README.md      Changed_It_To       git add .     
+								(this adds everything in the folder)
+when done your folder in Github and computer should be linked.
+now enter the cmds to push everytimne you want to send a commit
+
+git status
+git add.
+git commit -m "Enter your text here"
+git push
+
+check github
+only chnages will be updated
+
+To pull a folder into youir computer, cretae the repository on github then follow the cmds for the pull
+git clone thewebpsgeforsshundercodeforthe
+
+
+
+
+
+
+
+

@@ -6,39 +6,42 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(143, 0, 0);
     margin: 0;
+    flex-grow: 1;    
     font-family: Arial, sans-serif;
 }
 
+header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between; /* Puts a space inbetewwn the items in that area*/    
+    padding: 15px;
+    min-width: auto;
+    flex-direction: row; 
+}
+/*
 main{
     flex-grow: 1;
 }
-
-header {
-    background-color: rgb(194, 24, 7);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-}
+*/
 
 footer { 
     margin-top: auto;   
-    background-color: rgb(194, 24, 7);    
+    background-color: rgb(255, 255, 255);    
     text-align: right;
 }
 
+#footer-icon{
+    width: fit-content;
+}
 #home-icon,
 #center-icon,
-#menu-icon,
-#footer-icon{
-    cursor: context-menu;/*changes the cursor for the icons mentioned */
+#menu-icon{
+    width: 45%;
+    height: fit-content;
 }
 
-#footer-icon {
-    width: 100px;
-}
 
 .dropdown {
     position: relative;
