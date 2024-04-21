@@ -1,5 +1,5 @@
 *{
-    margin: 5px;
+    margin: 0px;
     box-sizing: border-box; /* will remove later this is for styling */
 }
 
@@ -7,45 +7,70 @@ body{
     background: rgb(255, 255, 255);
     font-family: sans-serif;
     text-align: center;
-    color: black;
-    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
     display: flex;
     flex-direction: column;
+    min-width: 530px;
     min-height: 100vh; /* Ensure body takes at least the height of the display yayyyy */
 }
 
+
+
+
 header{
-    background-color: beige;
-    padding: 2em 0;
+    background-color: rgb(255, 255, 255);
+   /* padding: 1em 0;*/
 }
+
+
+
+
 
 .left{ /*created class rule*/
-    background-color: rgb(247, 247, 145);
-    padding: 2em 2em;
+    background-color: rgb(128, 128, 128);
+    color: black;
+    padding: 1em 1em;
+    flex: 1 1 100px;
+}
+.right{ /*created class rule*/
+    background-color: rgb(128, 128, 128);
+    padding: 1em 1em;
     flex: 1 1 100px;
 }
 
-.right{ /*created class rule*/
-    background-color: rgb(38, 20, 71);
-    padding: 2em 2em;
-    flex: 1 1 100px;
-}
+
 
 main{
-    background-color: rgb(214, 0, 0);
+    background-color: rgb(56, 55, 55);
     padding: 3em 3em; /* Added padding to main for consistency */
     flex: 2 1 auto; /* Adjust main to fill available space */
 }
-
-footer{
-    background-color: rgb(206, 185, 185);
-    padding: 2em 2em;
-    margin-top: auto; /* Push the footer to the bottom */
-}
-
 .main{ /*created class rule*/
     display: flex;
     flex: 1; /* Ensures that main content flex container takes up any remaining space */
+}
+
+
+
+
+
+footer{
+    background-color: rgb(255, 255, 255);
+    padding: 4em 4em;
+    color: rgb(0, 0, 0);
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+
+
+
+
+
+
+.small-image {
+    width: 50px; /* or any other size */
+    height: auto; /* maintain aspect ratio */
 }
 
 @media all and (max-width: 550px){
@@ -56,3 +81,7 @@ footer{
         padding: 5em 0; /* Increase padding in mobile view */
     }
 }
+
+
+
+
