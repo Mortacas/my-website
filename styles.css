@@ -43,30 +43,44 @@ header{
 
 main{
     background-color:rgb(56, 55, 55);
-    padding: 3em 3em; /* Added padding to main for consistency   rgb(56, 55, 55);   rgb(128, 128, 128); */
+    padding: 1em 3em; /* Added padding to main for consistency   rgb(56, 55, 55);   rgb(128, 128, 128); */
     flex: 2 1 auto; /* Adjust main to fill available space */
+ 
 }
 .main{ /*created class rule*/
-    display: flex;
+    display: flex;    
     flex: 1; /* Ensures that main content flex container takes up any remaining space */
+
 }
 
+.button-container {
+    justify-content: space-around; /* Distribute items evenly with space around them */
+    align-items: center; /* Center items horizontally */
+}
 
 
 
 
 footer{
     background-color: rgb(255, 255, 255);
-    padding: 4em 4em;
+    padding: 2em 2em;
     color: rgb(0, 0, 0);
     margin-top: auto; /* Push the footer to the bottom */
 }
 
 
 
+.ocicon{
+    min-width: 300px;
+    max-width: 25%;
+}
 
-
-
+.searchicon,.acconticon,
+.abouticon,.contacticon,
+.adminicon,.editicon,
+.contacticon {
+    max-width: 150px;
+}
 
 .small-image {
     width: 50px; /* or any other size */
@@ -93,7 +107,7 @@ th {
         flex-direction: column;
     }
     main{
-        padding: 5em 0; /* Increase padding in mobile view */
+        padding: 5em 4em; /* Increase padding in mobile view */
     }
 }
 
