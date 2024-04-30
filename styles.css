@@ -15,7 +15,10 @@
     max-width: 180px;
 }
 
-
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+}
 
 body{
     background-color: rgb(255, 255, 255);
@@ -48,9 +51,12 @@ main{
     background-color: rgb(217, 217, 217);
     padding: 1em 3em 1em 3em;
     display: grid;
-    text-align: center;
+    text-align: center;   
+}
 
-    
+main > p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 footer{
@@ -61,6 +67,7 @@ footer{
 .right-images{
 display: flex;
 flex-direction: column;
+
 }
 
 .right{
@@ -69,17 +76,33 @@ flex-direction: column;
 }
 
 
+
+
+
+
+
+
 /* need to add to make it responsive for mobile*/
 @media all and (max-width:550px){
     .main{
         flex-direction: column;
     }
+
 }
 
 
 /*
 
-
+@media all and (max-width: 550px){
+    .main{
+        flex-direction: column;
+      
+    }
+    main{
+        padding: 5em 4em; /* Increase padding in mobile view *
+        min-width: auto;
+    }
+}
 
 *{
     margin: 0px;
