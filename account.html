@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Catalog - Available Books</title>
+    <title>Account</title>
     <link rel="stylesheet" href="css/tableSyles.css">
-    <script src="scripts/searchjavascript.js" defer></script>
+    <script src="scripts/accountsearchscript.js" defer></script>
 </head>
 
 <body>
@@ -14,10 +14,11 @@
 
         <div class="search-container">
             <a href="index.html"><img src="images/mvpoclogo2.png" alt="OC Logo" class="ocicon"></a>
-            <input type="text" id="searchInput" placeholder="Search available books..."
-                onkeyup="searchAvailableBooks()">
-                <button type="submit">Request Selected Books</button>
-        </div>
+                <h2><pre>Enter Name and CTC to Search Account </pre></h2>
+                <input type="text" id="studentNameInput" placeholder="Enter Student Name, First Name Last Name">
+                <input type="text" id="studentCtcInput" placeholder="Must Enter CTC then press Search">
+                <button onclick="searchBooks()">Search</button>           
+        </div>      
 
     </header>
 
@@ -29,8 +30,10 @@
                     <tr>
                         <th>Unit ID</th>
                         <th>Book Name</th>
-                        <th>ISBN</th>                        
-                        <th>Action</th>
+                        <th>ISBN</th>
+                        <th>Date Signed Out</th>
+                        <th>Date to return</th>                        
+                      
                     </tr>
                 </thead>
                 <tbody>

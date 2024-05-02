@@ -1,0 +1,174 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+ 
+}
+
+/* Header styling */
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+   
+  
+}
+.nav{
+    text-align: left;
+}
+
+main{
+    padding: 15em 0em 0em 0em;
+
+}
+
+header img.ocicon {
+    height: 70px;
+ 
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #b72b2b;
+    color: white;
+}
+
+/* Input styling */
+input[type="text"], input[type="date"], input[type="file"], input[type="int"], input[type="long"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+  .search-container {
+    background-color: #ffffff;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+  }
+
+/* Button styling */
+button {
+    background-color: #a01919;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #541eb9;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+   /* background-color: #6e0c0c;*/
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Right aside styling */
+aside.right {
+    padding: 20px;
+    background: rgba(112, 6, 6, 0.5);
+    border-radius: 4px;
+}
+
+
+
+
+
+/* Basic styles already defined above remain unchanged */
+
+/* Responsive media queries */
+
+/* Tablets and smaller desktops */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header img.ocicon {
+        height: 40px; /* Smaller logo for smaller screens */
+    }
+
+    th, td {
+        padding: 6px; /* Smaller padding in table cells */
+    }
+
+    input[type="text"], input[type="date"], input[type="file"], input[type="int"], input[type="long"], button {
+        padding: 12px;
+        font-size: 14px; /* Larger font size for better readability on small screens */
+    }
+
+    button {
+        width: 100%; /* Full width makes it easier to tap */
+        margin-top: 10px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(data-label); /* Label the data cells on small screens */
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    th {
+        display: none; /* Hide the headers on small devices */
+    }
+
+    input[type="text"], input[type="date"], input[type="file"], input[type="int"], input[type="long"] {
+        width: 100%;
+    }
+
+    aside.right {
+        margin-top: 20px; /* Add space between sections on small screens */
+    }
+
+    footer {
+        position: relative; /* Avoid fixed position on small devices */
+    }
+}
+

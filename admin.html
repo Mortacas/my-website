@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing a Format For Library</title>
+    <script src="scripts/jscript.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/tableSyles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="search-container">
+            <div>
+                <a href="index.html"><img src="images/mvpoclogo2.png" alt="OC Logo" class="ocicon"></a>
+            </div>
+            <div class="search-input"><input type="text" id="searchInput" placeholder="Search table..."
+                    onkeyup="searchTable()">
+            </div>
+            <button onclick="searchTable()">Search</button>
+            <input type="checkbox" id="availabilityFilter" onchange="filterByAvailability()">
+            <label>Show only available books</label>
+            <button onclick="filterCheckedOut()">Show Checked Out Books</button>
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+        <div>
+            <table id="data_table" border="1">
+                <tr>
+                    <div class="nav">
+                        <th>Unit ID</th>
+                        <th>Book Name</th>
+                        <th>ISBN</th>
+                        <th>Student Name</th>
+                        <th>Student CTC</th>
+                        <th>Student Email</th>
+                        <th>Date Signed Out</th>
+                        <th>Date to return</th>
+                        <th>Actions</th>
+                    </div>
+                </tr>
+            </table>
+
+            <input type="int" id="input1" placeholder="Unit ID              .">
+            <input type="text" id="input2" placeholder="Book Name">
+            <input type="long" id="input3" placeholder="ISBN">
+            <input type="text" id="input4" placeholder="Student Name">
+            <input type="long" id="input5" placeholder="Student CTC">
+            <input type="text" id="input6" placeholder="Student Email">
+            <input type="date" id="input7" placeholder="Signed Out Date">
+            <input type="date" id="input8" placeholder="Return Date">
+
+        </div>
+    </main>
+
+
+
+    <aside class="right">
+        <div class="button-container">
+            <input type="file" id="tableData" accept=".csv">
+            <button onclick="importCSV()">Import Data</button>
+            <button onclick="exportToCSV()">Export Data to CSV</button>
+            <button onclick="addRow()">Add Row</button>
+        </div>
+    </aside>
+
+
+
+    <footer>
+        <p>&copy; 2024 Hollo Moto. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+
+</html>
