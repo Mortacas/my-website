@@ -1,71 +1,97 @@
-*{
-    margin: 0px;   
+* {
+    margin: 0px;
     box-sizing: border-box;
-    
-}
-.ocicon{
-    min-width: 300px;
-    max-width: 25%;
+
 }
 
-.searchicon,.acconticon,
-.abouticon,.contacticon,
-.adminicon,.editicon,
-.contacticon, .small-image{
-    max-width: 180px;
+.ocicon {
+
+    border-radius: 1em;
+    background-color: rgba(255, 254, 254, 0.4); 
+    min-width: 200px;
+    max-width: 20%;
+    padding: 20px;
+}
+.ocicon:hover  {
+ 
+    border-radius: 1em;
+    transform: scale(1.05); /* Increase the size by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow */
 }
 
-h1{
+.searchicon,
+.acconticon,
+.abouticon,
+.contacticon,
+.adminicon,
+.editicon,
+.contacticon{
+    width: 15%;
+    min-width: 120px;
+}
+.small-image{
+    max-width: 80%;
+    min-width: 100px;
+}
+
+h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 26px;
 }
 
-body{
+body {
     background-color: rgb(255, 255, 255);
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.3em;
     font-weight: bolder;
     display: flex;
-    flex-direction: column;   
-    min-height: 100vh; 
-    min-width: auto;
-   
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vh;
+
 }
 
-.header{
-    background-color: rgb(255, 255, 255);
-    padding: 2em 2em 2em 2em; /* creates some edge space. top right bottom left */
+.header {
+    background: url(/my-website/images/mountainsbanner.png);
+    background-size: cover;
+    padding: 2em 2em 2em 2em;
+    /* creates some edge space. top right bottom left */
     text-align: center;
-}       /* creates some edge space. top right bottom left */
+}
 
-.main{
+/* creates some edge space. top right bottom left */
+
+.main {
     display: flex;
     flex: 1;
 }
 
-.left,.right{
+
+.left,
+.right {
     background-color: rgb(122, 17, 17);
+    border-radius: .3em;
     padding: 1em 2em 1em 2em;
-    max-width: 70vh; /*Allows us to change the width when the screen is minimized for phones*/
+    max-width: 100vh;
+    /*Allows us to change the width when the screen is minimized for phones*/
 }
 
-main{
-    background-color: rgb(185, 185, 185);
+main {
+    background-color: rgb(255, 255, 255);
     padding: 1em 3em 1em 3em;
+    width: calc(100% - 9em); /* Calculate the width to leave 2em of padding on each side */
+   
     display: grid;
-    text-align: center;    
+    text-align: center;
 }
 
-
-
-
-
-main > p{
+main>p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
-footer{
+footer {
     background-color: rgb(255, 255, 255);
     padding: 2em 2em 2em 2em;
     text-align: center;
@@ -73,7 +99,7 @@ footer{
 
 
 
-.right{
+.right {
     display: grid;
     text-align: center;
 }
@@ -86,22 +112,26 @@ footer{
     height: 20vh;
 }
 
-.leftSelfImages{
+.leftSelfImages {
     padding: 1em;
     float: left;
 }
 
-.rightSelfImages{
+.rightSelfImages {
     padding: 1em;
     float: right;
 
 }
 
-
 /* need to add to make it responsive for mobile*/
-@media all and (max-width:550px){
-    .main{
+@media all and (max-width:650px) {
+
+    .main {
+
         flex-direction: column;
+
     }
 
+
 }
+

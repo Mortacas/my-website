@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing a Format For Library</title>
+    <title>About Us</title>
     <script src="scripts/jscript.js" type="text/javascript"></script>
+    <script src="scripts/buttons.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buttonStyles.css">
 </head>
 
 <body>
@@ -19,8 +21,17 @@
 
     <div class="main">
         <aside class="left">
-            <h1>Navigation Bar</h1>
-            <p>See appexample.png in images for reference(app will be more minimalistic) picture</p>
+            <div class="dropdown">
+                <button onclick="mydropFunction()" class="dropbtn">Main_Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="search.html">Search</a>
+                  <a href="account.html">Account</a>
+                  <a href="aboutus.html">About</a>
+                  <a href="contactus.html">Contact</a>
+                  <a href="loginpage.html">Admin</a>
+                </div>
+              </div>
         </aside>
 
         <main>

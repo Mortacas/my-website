@@ -4,33 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing a Format For Library</title>
+    <title>Contact Us</title>
     <script src="scripts/jscript.js" type="text/javascript"></script>
+    <script src="scripts/buttons.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buttonStyles.css">
 </head>
 
-
 <body>
-    <header>
-        <h1>
 
-        <div class="button-container">
+    <header class="header">
+        <h1>
             <a href="index.html"><img src="images/mvpoclogo2.png" alt="Button 1" class="ocicon"></a>
-        </div>
         </h1>
     </header>
 
-    <div class = "main">
 
-        <aside class =  "left">
-            Left Side
-            <br><br>
-            Menu Button
+    <div class="main">
+        <aside class="left">
+            
+            <div class="dropdown">
+                <button onclick="mydropFunction()" class="dropbtn">Main_Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="search.html">Search</a>
+                  <a href="account.html">Account</a>
+                  <a href="aboutus.html">About</a>
+                  <a href="contactus.html">Contact</a>
+                  <a href="loginpage.html">Admin</a>
+                </div>
+              </div>
         </aside>
 
-
         <main>
-            
             <h1>Contact Us</h1>
             <br><br>
             <form action="submit_form.php" method="POST"> <!--create the php code to save info or send throug email-->
@@ -46,40 +52,25 @@
                 <button type="submit">Send</button><!--create the php code to save info or send throug email-->
             </form>
                 <br><br>
-
-               <!-- <div class="button-container">
-                    <a href="search.html"><img src="thumbnails/tsearchbutton.png" alt="Search buttomn" class = "searchicon"></a>
-                    <a href="account.html"><img src="thumbnails/taccount.png" alt="Account button"class = "acconticon"></a>
-                    <a href="aboutus.html"><img src="thumbnails/taboutus.png" alt="About Us button"class = "abouticon"></a>
-                    <a href="contactus.html"><img src="thumbnails/tcontactus.png" alt="Contact us button"class = "contacticon"></a>
-                    
-                    <a href="treadminer.html"><img src="     " alt="buttomn"class = "adminicon"></a>
-                    <a href="edttta.html"><img src="    " alt="button"class = "editicon"></a>
-                    <a href="aboutus.html"><img src="   " alt=" buttonclass = "abouticon"></a>
-                    <a href="contactus.html"><img src=" " alt="button"class = "contacticon"></a> 
-                </div>-->
-
+            
         </main>
 
-
-        <aside class = "right">
-            <div class="button-container">
-                <a href="https://studentveterans.org/"><img src="images/SVA_Seal_Transparent_Backgroundresized.png" alt="Search buttomn" class="small-image"></a>
+        <aside class="right">
+            <div class="right-images">
+                <a href="https://studentveterans.org/"><img src="images/SVA_Seal_Transparent_Backgroundresized.png"
+                        alt="Search buttomn" class="small-image"></a>
             </div>
-            <h1> Click Me </h1>
-            <br><br><br><br>
-            Right side
-            <p><strong>hollo moto</strong></p>
+
+            <p><strong>Join SVA</strong></p>
         </aside>
-
     </div>
-
-    <footer>
-        <p>&copy; 2024 Hollo Moto. All rights reserved.</p>
-    </footer>
-
-    
 </body>
+
+<footer>
+    <h1>
+        <p>&copy; 2024 Moe O. All rights reserved.</p>
+    </h1>
+</footer>
 
 
 </html>
