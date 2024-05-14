@@ -7,42 +7,49 @@
     <title>Library Catalog - Available Books</title>
     <link rel="stylesheet" href="css/tableSyles.css">
     <script src="scripts/searchjavascript.js" defer></script>
+    <script src="scripts/buttons.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/buttonStyles.css">
 </head>
 
 <body>
     <header>
 
+
         <div class="search-container">
+
             <a href="index.html"><img src="images/mvpoclogo2.png" alt="OC Logo" class="ocicon"></a>
             <input type="text" id="searchInput" placeholder="Search available books..."
                 onkeyup="searchAvailableBooks()">
-                <button type="submit">Request Selected Books</button>
+            <button type="submit">Request Selected Books</button>
         </div>
+
 
     </header>
 
 
     <main>
         <form id="bookRequestForm">
-            <table id="data_table" border="3">
+            <table id="data_table">
                 <thead>
                     <tr>
                         <th>Unit ID</th>
                         <th>Book Name</th>
-                        <th>ISBN</th>                        
-                        <th>Action</th>
+                        <th>ISBN</th>
+                        <th>Click to add to List for Checkout</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Rows will be dynamically filled by JavaScript -->
                 </tbody>
             </table>
-            
+
         </form>
     </main>
 
     <footer>
         <p>&copy; 2024 Library. All rights reserved.</p>
+        <br>
+        <a href="#">Back to Top</a>
     </footer>
 </body>
 

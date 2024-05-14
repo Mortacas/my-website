@@ -1,10 +1,10 @@
 /*Style for the Drop Button for the menu*/
 .dropbtn {
-    background-color: #888888;
-    color: rgb(0, 0, 0);
+    background-color: #4c0606;
+    color: rgb(255, 255, 255);
     padding: 16px;
     font-size: 20px;
-     border-radius: .5em;
+    border-radius: .5em;
     cursor: pointer;
 }
 
@@ -15,10 +15,9 @@
 .abouticon:hover,
 .contacticon:hover,
 .adminicon:hover,
-.small-image:hover{
- 
-    border-radius: 1em;
-    transform: scale(1.05); /* Increases size by 5% */
+.small-image:hover{ 
+    border-radius: .8em;
+    transform: scale(1.05); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds a shadow */
 }
 
@@ -27,18 +26,19 @@
     width: 140px;
     position: relative;
     display: inline-block;
+    border-top: black;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #aeacac;
-    /*border: solid;*/
+    position: absolute;/*This doesnt let the aside extend downwards*/
+    background-color: #ffffff;
+    
     border-radius: .5em;
     width: 140px;
     overflow: visible;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
+    left: 0;
     z-index: 1;
 }
 
@@ -47,6 +47,8 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border: solid 1px;
+    border-radius: .2em;
 }
 
 .dropdown a:hover {
@@ -56,4 +58,4 @@
 .show {
     display: block;
 }
-searchicon,acconticon,abouticon,contacticon,adminicon
+/*searchicon,acconticon,abouticon,contacticon,adminicon*/
