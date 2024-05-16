@@ -7,6 +7,7 @@
 
 /* Fonts and Typography */
 body {
+    background: url(/my-website/images/redmountains.png);
     font-family: 'Roboto', sans-serif; /* Modern font */
     font-size: 16px;
 }
@@ -18,7 +19,7 @@ h1 {
 
 /* Header */
 .header {
-    background-color: #fff;
+
     padding: 2em;
     text-align: center;
 }
@@ -91,7 +92,7 @@ h1{
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+   
     font-family: sans-serif;
     font-size: 16;
     display: flex;
@@ -101,7 +102,7 @@ body{
 }
 
 .header{
-    background-color: rgb(255, 255, 255);
+ 
     padding: 2em 2em 2em 2em; /* creates some edge space. top right bottom left */
     text-align: center;
 }       /* creates some edge space. top right bottom left */
@@ -113,7 +114,7 @@ body{
 
 
 main{
-    background-color: rgb(255, 255, 255);
+ 
     padding: 1em 3em 1em 3em;
     display: grid;
     text-align: center;   
@@ -125,7 +126,7 @@ main > p{
 }
 
 footer{
-    background-color: rgb(255, 255, 255);
+  
     padding: 2em 2em 2em 2em;
     text-align: center;
 }

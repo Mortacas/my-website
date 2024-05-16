@@ -83,7 +83,7 @@ body {
 main {
     padding: 1em 2em 1em 2em;
     width: calc(100% - 100px); /* Calculate the width to leave 2em of padding on each side */   
-    display: grid;
+
     text-align: center;
 }
 
@@ -101,7 +101,6 @@ footer {
 
 
 .right {
-    display: grid;
     text-align: center;
 }
 
@@ -135,8 +134,9 @@ footer {
         background-color: rgb(165, 19, 27);
         border-radius: .2em;
         padding: 1em 2em 1em 2em;
-        max-width: 100%;
-                    /*Allows us to change the width when the screen is minimized for phones*/
+        max-width: 100%;/*Allows us to change the width when the screen is minimized for phones*/
+        height: unset;
+        max-height: fit-content;
     }
     .small-image{
         max-width: 25%;
