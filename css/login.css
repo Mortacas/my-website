@@ -7,7 +7,7 @@
 
 /* Fonts and Typography */
 body {
-    background: url(/my-website/images/redmountains.png);
+    background: url(../images/redmountains.png);
     font-family: 'Roboto', sans-serif; /* Modern font */
     font-size: 16px;
 }
