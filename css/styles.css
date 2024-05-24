@@ -7,17 +7,17 @@
 .ocicon {
 
     border-radius: 1.5em;
-    background-color: rgba(255, 254, 254, 0.6); 
+    background-color: rgba(255, 254, 254, 0.6);
     min-width: 250px;
     max-width: 20%;
     padding: 20px;
 }
-.ocicon:hover  {
- 
-    border-radius: 1em;
-    transform: scale(1.05); /* Increase the size by 5% */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow */
 
+.ocicon:hover {
+
+    border-radius: 1em;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .searchicon,
@@ -26,11 +26,12 @@
 .contacticon,
 .adminicon,
 .editicon,
-.contacticon{
-    width: 15%;
-    min-width: 140px;
+.contacticon {
+    width: 85%;
+    min-width: 170px;
 }
-.small-image{
+
+.small-image {
     max-width: 80%;
     min-width: 100px;
 }
@@ -41,11 +42,10 @@ h1 {
 }
 
 body {
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     font-family: sans-serif;
     font-size: 18px;
     font-weight: bolder;
-
     min-height: 95vh;
     min-width: 95vw;
 }
@@ -54,13 +54,12 @@ body {
 .header {
     background: url(../images/redmountains.png);
     background-size: cover;
-    background-position: 100% 50%;
+    background-position: center;
     padding: 1em 1em 1em 1em;
-    /* creates some edge space. top right bottom left */
     text-align: center;
 }
 
-/* creates some edge space. top right bottom left */
+
 
 .main {
     display: flex;
@@ -71,35 +70,60 @@ body {
 .left,
 .right {
     background-color: rgb(165, 19, 27);
-    border-radius: .2em;
+    /*border-radius: .2em;*/
     padding: 1em 2em 1em 2em;
     max-width: 100vh;
-    min-height: 90vh;
+    min-height: 80vh;
 
-    /*Allows us to change the width when the screen is minimized for phones*/
+
 }
 
 main {
     padding: 1em 2em 1em 2em;
-    width: calc(100% - 100px); /* Calculate the width to leave 2em of padding on each side */   
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-#searchicon{grid-area: 1;}
-#acconticon{grid-area: 2}
-#abouticon{grid-area: 3;}
-#contacticon{grid-area: 4;}
 
+.button-container {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-areas:
+        'one two three four five six'
+}
+
+.homebutton {
+    grid-area: one;
+}
+
+.searchbutton {
+    grid-area: two;
+}
+
+.accountbutton {
+    grid-area: three;
+}
+
+.aboutbutton {
+    grid-area: four;
+}
+
+.contactbutton {
+    grid-area: five;
+}
+
+.adminbutton {
+    grid-area: six;
+}
 
 main>p {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family: sans-serif;   
     line-height: 1.5em;
 }
 
-footer {    
-    padding: 2em 2em 2em 2em;
+footer {
+    padding: 4em 2em 2em 2em;
     text-align: center;
     margin-bottom: auto;
 }
@@ -128,63 +152,109 @@ footer {
     float: right;
 
 }
-@media all and (max-width:1300px){
-    main{
-        display: unset;
-        flex-direction: unset;
-        
+
+
+@media all and (max-width:1409px) {
+
+    .searchicon,
+    .acconticon,
+    .abouticon,
+    .contacticon,
+    .adminicon,
+    .editicon,
+    .contacticon {
+        width: 170px;
     }
 
-.searchicon,
-.acconticon,
-.abouticon,
-.contacticon,
-.adminicon,
-.editicon,
-.contacticon{
-    width: 15%;
-    min-width: 170px;
-}
-    
-    .button-container{
-        display: grid;
-        grid-template-areas: "searchicon acconticon"" abouticon contacticon ";
-        text-align: center;
-        grid-gap: 1em;
+    .button-container {
+        grid-template-areas:
+            'two three four'
+            'five six one';
     }
+
+
 }
-/* need to add to make it responsive for mobile*/
-@media all and (max-width:1000px) {
+
+@media all and (max-width:1030px) {
 
     .main {
-        display:unset;
+        display: unset;
     }
-    main>p{
+
+    .button-container {
+        grid-template-areas:
+            'two three four five six';
+    }
+
+    main>p {
         padding: 2em;
-    }   
-    main>h1{
+    }
+
+    main>h1 {
         padding: 1em;
     }
 
-    
+
     .left,
     .right {
-        background-color: rgb(165, 19, 27);
         border-radius: .2em;
         padding: 1em 2em 1em 2em;
-        max-width: 100%;/*Allows us to change the width when the screen is minimized for phones*/
+        max-width: 120%;
         min-height: unset;
         max-height: fit-content;
     }
-    .small-image{
-        max-width: 25%;
+
+    .small-image {
+        max-width: 15%;
         min-width: 100px;
     }
+
     main {
-        padding: 1em 10em 1em 2em;
-        width: 100%; 
+        padding: 1em 2em 1em 2em;
+        width: 100%;
     }
 
 
 }
 
+@media all and (max-width:938px) {
+
+    .button-container {
+        grid-template-areas:
+            'two three four'
+            'five six one';
+    }
+    main>p {
+        padding: unset;
+    }
+
+    main>h1 {
+        padding: unset;
+    }
+
+}
+
+@media all and (max-width:590px) {
+
+    .button-container {
+        grid-template-areas:
+            'two three'
+            'four five'
+            'six one';
+        min-height: 1%;
+        min-width: none;
+    }
+    .main{
+        padding: unset;
+    }
+    .searchicon,
+    .acconticon,
+    .abouticon,
+    .contacticon,
+    .adminicon,
+    .editicon,
+    .contacticon {
+        width:5%;
+    }
+
+}

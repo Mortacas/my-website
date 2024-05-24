@@ -121,7 +121,7 @@ function exportToCSV() {
     }
 
     let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += "Unit ID,Book Name,Book Name,ISBN,Student Name,Student CTC,Student Email,Signed out Date,Return Date\n"; // Add headers
+    csvContent += "Unit ID,Book Name,Book Name,ISBN,Student Name,Student CTC,Student Email,Signed out Date,Return Date\n";
 
     data.forEach(row => {
         let rowContent = row.join(",");
@@ -132,7 +132,7 @@ function exportToCSV() {
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", "tableData.csv");
-    document.body.appendChild(link); // Required for FF
+    document.body.appendChild(link); 
 
     link.click();
     document.body.removeChild(link);
@@ -146,15 +146,15 @@ function searchTable() {
     table = document.getElementById("data_table");
     tr = table.getElementsByTagName("tr");
 
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 1; i < tr.length; i++) { // Start from 1 to skip the header row
+  
+    for (i = 1; i < tr.length; i++) {
         var rowMatches = false;
         td = tr[i].getElementsByTagName("td");
-        for (var j = 0; j < td.length; j++) { // Check each cell in the row
+        for (var j = 0; j < td.length; j++) { 
             if (td[j]) {
                 txtValue = td[j].textContent || td[j].innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    rowMatches = true; // Found a match in this row
+                    rowMatches = true; 
                     break;
                 }
             }
@@ -172,17 +172,16 @@ function filterByAvailability() {
     table = document.getElementById("data_table");
     tr = table.getElementsByTagName("tr");
 
-    // Loop through all table rows and display only those with an empty 'Student Name' field
-    for (i = 1; i < tr.length; i++) { // Skip the header row
-        nameCell = tr[i].getElementsByTagName("td")[3]; // Assuming 'Student Name' is the fourth column (index 3)
+   
+    for (i = 1; i < tr.length; i++) { 
+        nameCell = tr[i].getElementsByTagName("td")[3]; 
         if (isChecked) {
             if (nameCell.textContent.trim() === "") {
-                tr[i].style.display = ""; // Show the row if the name cell is empty
-            } else {
-                tr[i].style.display = "none"; // Hide the row if the name cell is not empty
+                tr[i].style.display = "";
+                tr[i].style.display = "none"; 
             }
         } else {
-            tr[i].style.display = ""; // Show all rows when the checkbox is unchecked
+            tr[i].style.display = ""; 
         }
     }
 }
@@ -192,13 +191,13 @@ function filterCheckedOut() {
     table = document.getElementById("data_table");
     tr = table.getElementsByTagName("tr");
 
-    // Loop through all table rows and display only those with a filled 'Student Name' field
-    for (i = 1; i < tr.length; i++) { // Skip the header row
-        nameCell = tr[i].getElementsByTagName("td")[3]; // Assuming 'Student Name' is the fourth column (index 3)
+    
+    for (i = 1; i < tr.length; i++) { 
+        nameCell = tr[i].getElementsByTagName("td")[3]; 
         if (nameCell.textContent.trim() !== "") {
-            tr[i].style.display = ""; // Show the row if the name cell is filled
+            tr[i].style.display = ""; 
         } else {
-            tr[i].style.display = "none"; // Hide the row if the name cell is empty
+            tr[i].style.display = "none"; 
         }
     }
 }

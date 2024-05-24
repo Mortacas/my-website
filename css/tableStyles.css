@@ -1,17 +1,37 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    padding: 20px;
-    color: #333;
+    margin: 0%;
+    font-family: sans-serif;
 
 }
 
 /* Header styling */
 header {
-    background-color: #ffffff;
-    padding: 10px 0;
+    background: url(../images/red-space-background.jpg);
+    background-size: cover;
+    
     text-align: center;
+    position: fixed;
+    width: 100vw;
+    height: 240px;
+
+
+}
+
+.ocicon {
+
+    border-radius: 1.4em;
+    background-color: rgba(255, 254, 254, 0.6);
+
+    padding: 20px;
+    margin: 1em;
+    height: 100px;
+}
+
+#searchInput {
+    width: 75vw;
+    align-items: center;
+
 }
 
 .nav {
@@ -19,14 +39,9 @@ header {
 }
 
 main {
-    padding: 13em 0em 0em 0em;
+    padding-top: 220px;
 
 }
-
-header img.ocicon {
-    height: 70px;
-}
-
 
 /* Table styling */
 table {
@@ -64,14 +79,7 @@ input[type="long"] {
     border-radius: 4px;
 }
 
-.search-container {
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    width: 98%;
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 /* Button styling */
@@ -114,47 +122,6 @@ aside.right {
 
 
 
-
-/* Basic styles already defined above remain unchanged */
-
-/* Responsive media queries */
-
-/* Tablets and smaller desktops */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header img.ocicon {
-        height: 40px;
-        /* Smaller logo for smaller screens */
-    }
-
-    th,
-    td {
-        padding: 6px;
-        /* Smaller padding in table cells */
-    }
-
-    input[type="text"],
-    input[type="date"],
-    input[type="file"],
-    input[type="int"],
-    input[type="long"],
-    button {
-        padding: 12px;
-        font-size: 14px;
-        /* Larger font size for better readability on small screens */
-    }
-
-    button {
-        width: 100%;
-        /* Full width makes it easier to tap */
-        margin-top: 10px;
-    }
-}
-
-/* Mobile phones */
 @media (max-width: 480px) {
 
     table,
@@ -173,7 +140,6 @@ aside.right {
 
     td:before {
         content: attr(data-label);
-        /* Label the data cells on small screens */
         float: left;
         font-weight: bold;
         text-transform: uppercase;
@@ -181,7 +147,6 @@ aside.right {
 
     th {
         display: none;
-        /* Hide the headers on small devices */
     }
 
     input[type="text"],
@@ -192,13 +157,9 @@ aside.right {
         width: 100%;
     }
 
-    aside.right {
-        margin-top: 20px;
-        /* Add space between sections on small screens */
-    }
+
 
     footer {
         position: relative;
-        /* Avoid fixed position on small devices */
     }
 }

@@ -31,7 +31,7 @@
 
 .dropdown-content {
     display: none;
-    position: absolute;/*This doesnt let the aside extend downwards*/
+    position: absolute;
     background-color: #ffffff;
     
     border-radius: .5em;
