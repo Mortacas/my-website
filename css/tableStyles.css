@@ -49,20 +49,33 @@ table {
     background-color: rgb(255, 255, 255);
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.1);;
 }
 
-th,
-td {
-    border: 1px solid #000000;
-    padding: 8px;
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
     text-align: left;
 }
 
 th {
     background-color: #b72b2b;
     color: white;
+    border-color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 240px;
+}
+tr:nth-child(even) {
+    background-color: #ffdddd;
 }
 
+tr:hover {
+    background-color: #f1f1f1;
+}
 
 
 /* Input styling */
@@ -104,9 +117,10 @@ button:hover {
 /* Footer styling */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 5px 0px;
     color: rgb(0, 0, 0);
-    position: relative;
+    position: fixed;
+    background-color: white;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -124,42 +138,5 @@ aside.right {
 
 @media (max-width: 480px) {
 
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-
-    th,
-    td {
-        text-align: right;
-    }
-
-    td:before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    th {
-        display: none;
-    }
-
-    input[type="text"],
-    input[type="date"],
-    input[type="file"],
-    input[type="int"],
-    input[type="long"] {
-        width: 100%;
-    }
-
-
-
-    footer {
-        position: relative;
-    }
+   
 }

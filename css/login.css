@@ -1,37 +1,37 @@
-/* Reset styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fonts and Typography */
+
 body {
     background: url(../images/redmountains.png);
-    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-family: 'Roboto', sans-serif; 
     font-size: 16px;
 }
 
 h1 {
     font-size: 36px;
-    color: #000000; /* Dark color for headings */
+    color: #000000; 
 }
 
-/* Header */
+
 .header {
 
     padding: 2em;
     text-align: center;
 }
 
-/* Main Content */
+
 .loginmain {
     display: flex;
 
 }
 
 .login-container {
-    background-color: #e3cccc; /* Light background color */
+    background-color: #e3cccc; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #430000; /* Lighter text color */
+    color: #430000; 
 }
 
 input[type="text"],
@@ -54,15 +54,14 @@ input[type="password"] {
     border: 1px solid #690404;
     border-radius: 5px;
     font-size: 16px;
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-color: #b02d01; /* Highlight border color on focus */
+    border-color: #b02d01;
 }
-
 button {
     width: 100%;
     padding: 12px;
@@ -72,13 +71,11 @@ button {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+    transition: background-color 0.3s ease-in-out; 
 }
-
 button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
+    background-color: #0056b3;
 }
-
 .ocicon{
     min-width: 300px;
     max-width: 25%;
